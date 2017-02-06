@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12401</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-02-05.16:46:10.680</IntrospectionTimestamp>
+      <IntrospectionStateNumber>569</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12113</ObjectId>
+    </schema>
+    <table id="9" parent="3" name="lists">
+      <ObjectId>16411</ObjectId>
+      <StateNumber>565</StateNumber>
+    </table>
+    <table id="10" parent="3" name="products">
+      <ObjectId>16396</ObjectId>
+      <StateNumber>569</StateNumber>
+    </table>
+    <column id="11" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>555</StateNumber>
+    </column>
+    <column id="12" parent="9" name="list_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>565</StateNumber>
+    </column>
+    <index id="13" parent="9" name="lists_id_pk">
+      <ObjectId>16415</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="14" parent="9" name="lists_id_uindex">
+      <ObjectId>16414</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="15" parent="9" name="lists_id_pk">
+      <ObjectId>16416</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>lists_id_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="16" parent="10" name="list_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>556</StateNumber>
+    </column>
+    <column id="17" parent="10" name="product_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>552</StateNumber>
+    </column>
+    <column id="18" parent="10" name="prod_quantity">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>569</StateNumber>
+    </column>
+    <column id="19" parent="10" name="id">
+      <Position>4</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>560</StateNumber>
+    </column>
+    <index id="20" parent="10" name="products_id_pk">
+      <ObjectId>16418</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="21" parent="10" name="products_id_uindex">
+      <ObjectId>16417</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="22" parent="10" name="products_id_pk">
+      <ObjectId>16419</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>products_id_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="23" parent="10" name="products_id_fk">
+      <ObjectId>16420</ObjectId>
+      <ColNames>list_id</ColNames>
+      <RefTableName>lists</RefTableName>
+      <RefKeyName>lists_id_pk</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
